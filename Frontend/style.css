@@ -60,6 +60,9 @@
     cursor: pointer;
     height: 3em;
 }
+.menu img{
+    height: 1.5em;
+}
 
 .content {
     position: absolute;
