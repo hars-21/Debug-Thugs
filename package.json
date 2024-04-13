@@ -18,6 +18,7 @@
   "homepage": "https://github.com/hars-21/Debug-Thugs#readme",
   "keywords": [],
   "dependencies": {
+    "connect-flash": "^0.1.1",
     "ejs": "^3.1.10",
     "ejs-mate": "^4.0.0",
     "express": "^4.19.2",
