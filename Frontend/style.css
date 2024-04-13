@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bg{
+    display: flex;
+}
+.bg img{
+    height: 50em;
+    width: 95em;
+}
+.navbar{
+    position: absolute;
+    top: 1em;
+    left: 9.5em;
+    margin :auto;
+    display: flex;
+    height: 5em;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 50em;
+    font-family: 'Times New Roman', Times, serif; ;
+}
+.site_name{
+    width: 5em;
+    font-size: 2em;
+    font-weight: 5000;
+}
+.nav_items{
+    display: flex;
+    gap: 2em;
+    height: 5em;
+    align-items: center;
+}
+.login{
+    display: flex;
+    align-items: center;
+    width: 7em;
+    font-size: 1.2em;
+}
+#profile img{
+    height: 5em;
+}
+
+.nav_items img{
+    cursor: pointer;
+    height: 3em;
+}
+.content{
+    position: absolute;
+    top: 15em;
+    /* left: 28em; */
+    color: white;
+    font-family: 'Times New Roman', Times, serif; ;
+    height: 10em;
+    width: 100vw;
+    text-align: center;
+    font-weight: 5000;
+}
+.purpuse p{
+    font-size: 4em;
+    margin-bottom: 0.5em;
+}
