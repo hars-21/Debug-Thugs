@@ -4,9 +4,6 @@
     box-sizing: border-box;
 }
 .navbar {
-    position: absolute;
-    /* top: 1em; */
-    /* left: 9.5em; */
     margin: auto;
     display: flex;
     height: 5em;
@@ -58,4 +55,55 @@
 .menu img{
     height: 1.5em;
 }
-.hotel_img1
+.hotel_details{
+    display: flex;
+    align-items: center;
+    gap: 5em;
+}
+.detail_left{
+    width: 35em;
+}
+.hotel_img img {
+    height: 20em;
+    margin: 5em;
+    border-radius: 2em;
+}
+.detail_right{
+    display: flex;
+    flex-direction: column;
+    width: 40em;
+    gap: 1.1em;
+}
+.detail_right p{
+    width: 10em;
+    font-size: xx-large;
+}
+#spcldetail{
+    width: 7em;
+}
+h1{
+    width: 4em;
+}
+.detail_1{
+    display: flex;
+    align-items: center;
+}
+.detail_2{
+    display: flex;
+    align-items: center;
+}
+.detail_2 p{
+    width: 20em;
+}
+.detail_3{
+    display: flex;
+    align-items: center;
+}
+.menu_img{
+    display: flex;
+    justify-content: start;
+    gap: 2em;
+}
+.menu_img img{
+    height: 40em;
+}
