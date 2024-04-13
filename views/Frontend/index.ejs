@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>InstaDine</title>
+		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="bg">
+				<img src="/Frontend/Assets/hero-bg.jpg" alt="" />
+			</div>
+			<div class="navbar">
+				<div class="site_name">
+					<p>InstaDine</p>
+				</div>
+				<div class="nav_items">
+					<div class="login">
+						<img id="profile" src="/Frontend/Assets/profile-icon.png" alt="" />
+						<p>Login</p>
+					</div>
+					<div class="search">
+						<img id="search" src="/Frontend/Assets/search-btn.png" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="purpuse">
+					<p>Discover restaurant and food</p>
+					<h3>You get Best restaurant here</h3>
+					<br />
+				</div>
+				<div class="search">
+					<input
+						placeholder="Search Hotel"
+						type="text"
+						name="Search Hostel"
+						id="search"
+					/>
+					<input
+						placeholder="All Locations"
+						type="text"
+						name="All Locations"
+						id=""
+					/>
+					<div class="btn">
+						<p>Search</p>
+					</div>
+				</div>
+			</div>
+			<div class="best">
+				<div class="heading2">
+					<p>Our Best Popular Recipes</p>
+				</div>
+				<br />
+				<br />
+				<br />
+
+				<div
+					id="carouselExampleAutoplaying"
+					class="carousel slide"
+					data-bs-ride="carousel"
+				>
+					<div class="carousel-inner">
+						<% for(rest in allRestaurants) { %>
+						<div class="carousel-item">
+							<div class="card">
+								<%= rest.image %>
+								<h2><%= rest.name%></h2>
+								<p><%= rest.location%></p>
+								<p><%= rest.rating%></p>
+							</div>
+						</div>
+						<% } %>
+					</div>
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#carouselExampleAutoplaying"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#carouselExampleAutoplaying"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
