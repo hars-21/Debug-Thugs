@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .bg {
@@ -48,6 +49,7 @@
     align-items: center;
     width: 7em;
     font-size: 1.2em;
+    cursor: pointer;
 }
 
 #profile img {
@@ -107,7 +109,7 @@
     justify-self: center;
     border-radius: 5em;
     background-color: yellow;
-    color: blue;
+    color: rgba(72, 85, 254, 0.95);
     cursor: pointer;
     transition-duration: 1s;
 }
@@ -158,4 +160,127 @@
 
 .hotels img:hover {
     transform: rotateY(180deg);
+}
+.htlsnames{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    top: 1em;
+    gap: 10em;
+    font-size: 2em;
+}
+#hotel_1{
+    position: relative;
+    left:1.59em ;
+    
+}
+
+#hotel_2{
+    position: relative;
+    
+}
+#hotel_3{
+    position: relative;
+    left: -2.2em;
+    
+}
+
+.order{
+    display: flex;
+    justify-content: center;
+    
+}
+.button{
+    display: flex;
+    position: relative;
+    top: 5em;
+    align-items: center;
+    justify-content: center;
+    height: 2.5em;
+    width: 7em;
+    border: 1px solid black;
+    border-radius: 5em;
+    background-color: yellow;
+    font-size: larger;
+    font-weight: bolder;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+.button:hover{
+    scale: 1.2;
+    background-color: white;
+}
+.heading4 p{
+    position: relative;
+    top: 21em;
+    font-size: 2em;
+    text-align: center;
+    font-weight: bolder;
+}
+.food{
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    position: relative;
+    top: 48em;
+}
+.food img{
+    transition-duration: 1s;
+    border-radius: 2em;
+}
+.food img:hover{
+    scale: 1.1;
+}
+.Delicious{
+    position: relative;
+    top: 5em;
+}
+.names{
+    display: flex;
+    justify-content: center;
+    gap: 10.4em;
+    position: relative;
+    top: 25em;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    font-weight: bolder;
+    color: rgba(72, 85, 254, 0.95);
+}
+.names img{
+    border-radius: 5em;
+}
+.aboutus{
+    position: relative;
+    top: 60em;
+    text-align: center;
+}
+.about_details{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    top: 6em;    
+    font-size: 1.5em;
+}
+.about_details p{
+    height: 20em;
+    width: 40em;
+}
+.heading5{
+    font-size: 2.5em;
+    font-weight: bolder;
+}
+.aboutimg{
+    position: relative;
+    top: 5em;
+}
+.Latestdisc{
+    position: relative;
+    text-align: center;
+    top: 28em;
+    font-size: 2em;
+    font-weight: bolder;
+}
+.heading6{
+    font-size: 2em;
 }
