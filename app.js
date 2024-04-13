@@ -7,10 +7,10 @@ const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError");
 const wrapAsync = require("./utils/wrapAsync");
-// const session = require("express-session");
-// const passport = require("passport");
-// const LocalStrategy = require("passport-local");
-// const User = require("./models/user");
+const session = require("express-session");
+const passport = require("passport");
+const LocalStrategy = require("passport-local");
+const User = require("./models/user");
 
 app.use(express.static(path.join(__dirname, "/public")));
 app.set("view engine", "ejs");
@@ -19,12 +19,18 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 
-// app.use(passport.initialize());
-// app.use(passport.session());
-// passport.use(new LocalStrategy(User.authenticate()));
+app.use(
+	session({
+		resave: false,
+		saveUninitialized: false,
+		secret: "hello hi",
+	})
+);
 
-// passport.serializeUser(User.serializeUser());
-// passport.deserializeUser(User.deserializeUser());
+app.use(passport.initialize());
+app.use(passport.session());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 const MONGO_URL = "mongodb://localhost:27017/instadine";
 
@@ -43,7 +49,7 @@ app.get(
 	"/",
 	wrapAsync(async (req, res) => {
 		const allRestaurants = await Restaurant.find({});
-		res.render("Frontend/index.ejs", { allRestaurants });
+		res.render("rest/index.ejs", { allRestaurants });
 	})
 );
 
@@ -57,42 +63,41 @@ app.get(
 	})
 );
 
-app.get("/register", (req, res) => {
-	res.render("users/register");
+app.get("/signup", (req, res, next) => {
+	res.render("signup.ejs");
+});
+
+app.post("/signup", function (req, res, next) {
+	const data = new userModel({
+		username: req.body.username,
+		fullName: req.body.fullName,
+		email: req.body.email,
+		contact: req.body.contact,
+	});
+	userModel.register(data, req.body.password).then(function () {
+		passport.authenticate("local")(req, res, function () {
+			res.redirect("/");
+		});
+	});
 });
 
 app.post(
-	"/register",
-	wrapAsync(async (req, res) => {
-		const { email, password } = req.body;
-		const user = new User({ email });
-		const registeredUser = await User.register(user, password);
-		req.login(registeredUser, (err) => {
-			if (err) return next(err);
-			res.redirect("/");
-		});
-	})
+	"/login",
+	passport.authenticate("local", {
+		failureRedirect: "/signup",
+		successRedirect: "/",
+	}),
+	function (req, res, next) {}
 );
 
-app.get("/login", (req, res) => {
-	res.render("users/login");
+app.get("/logout", function (req, res, next) {
+	req.logout(function (err) {
+		if (err) {
+			return next(err);
+		}
+		res.redirect("/signup");
+	});
 });
-
-// app.post(
-// 	"/login",
-// 	passport.authenticate("local", {
-// 		failureFlash: true,
-// 		failureRedirect: "/login",
-// 	}),
-// 	(req, res) => {
-// 		res.redirect("/");
-// 	}
-// );
-
-// app.get("/logout", (req, res) => {
-// 	req.logout();
-// 	res.redirect("/");
-// });
 
 app.all("*", (req, res, next) => {
 	next(new ExpressError(404, "Page Not Found"));
