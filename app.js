@@ -43,7 +43,7 @@ app.get(
 	"/",
 	wrapAsync(async (req, res) => {
 		const allRestaurants = await Restaurant.find({});
-		res.render("rest/index.ejs", { allRestaurants });
+		res.render("Frontend/index.ejs", { allRestaurants });
 	})
 );
 
