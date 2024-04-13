@@ -11,6 +11,7 @@ const session = require("express-session");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user");
+const flash = require("connect-flash");
 
 app.use(express.static(path.join(__dirname, "/public")));
 app.set("view engine", "ejs");
@@ -24,15 +25,37 @@ app.use(
 		resave: false,
 		saveUninitialized: false,
 		secret: "hello hi",
+		cookie: {
+			expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
+			maxAge: 1000 * 60 * 60 * 24 * 7,
+			httpOnly: true,
+		},
 	})
 );
+app.use(flash());
 
 app.use(passport.initialize());
 app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+app.use((req, res, next) => {
+	res.locals.success = req.flash("success");
+	res.locals.error = req.flash("error");
+	next();
+});
+
 const MONGO_URL = "mongodb://localhost:27017/instadine";
+
+function isLoggedIn(req, res, next) {
+	if (!req.isAuthenticated()) {
+		req.session.returnTo = req.originalUrl;
+		req.flash("error", "You must be signed in first!");
+		return res.redirect("/login");
+	}
+	next();
+}
 
 main()
 	.then(() => {
@@ -55,7 +78,7 @@ app.get(
 
 // Show Route
 app.get(
-	"/:id",
+	"/restaurant/:id",
 	wrapAsync(async (req, res) => {
 		const { id } = req.params;
 		const restaurant = await Restaurant.findById(id);
@@ -64,37 +87,47 @@ app.get(
 );
 
 app.get("/signup", (req, res, next) => {
-	res.render("signup.ejs");
+	res.render("users/signup.ejs");
 });
 
-app.post("/signup", function (req, res, next) {
-	const data = new userModel({
-		username: req.body.username,
-		fullName: req.body.fullName,
-		email: req.body.email,
-		contact: req.body.contact,
-	});
-	userModel.register(data, req.body.password).then(function () {
-		passport.authenticate("local")(req, res, function () {
+app.post(
+	"/signup",
+	wrapAsync(async (req, res, next) => {
+		try {
+			let { username, email, password } = req.body;
+			const newUser = new User({ username, email });
+			const registeredUser = await User.register(newUser, password);
+			req.flash("success", "Welcome to Instadine!");
 			res.redirect("/");
-		});
-	});
+		} catch (e) {
+			req.flash("error", e.message);
+			res.redirect("/signup");
+		}
+	})
+);
+
+app.get("/login", (req, res, next) => {
+	res.render("users/login.ejs");
 });
 
 app.post(
 	"/login",
 	passport.authenticate("local", {
-		failureRedirect: "/signup",
-		successRedirect: "/",
+		failureRedirect: "/login",
+		failureFlash: true,
 	}),
-	function (req, res, next) {}
+	async (req, res, next) => {
+		req.flash("success", "Welcome back!");
+		res.redirect("/");
+	}
 );
 
 app.get("/logout", function (req, res, next) {
-	req.logout(function (err) {
+	req.logout((err) => {
 		if (err) {
 			return next(err);
 		}
+		req.flash("success", "Logged out successfully!");
 		res.redirect("/signup");
 	});
 });
