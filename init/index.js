@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const initData = require("./data.js");
 const Restaurant = require("../models/restaurant.js");
 
-const MONGO_URL = "mongodb://localhost:27017/restaurants";
+const MONGO_URL = "mongodb://localhost:27017/instadine";
 
 main()
 	.then(() => {

@@ -1,0 +1,29 @@
+footer {
+	background-color: #f8f9fa;
+	padding: 20px 0;
+	text-align: center;
+}
+
+.footer-container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.footer-menu {
+	list-style-type: none;
+	padding: 0;
+}
+
+.footer-menu li {
+	display: inline;
+	margin: 0 10px;
+}
+
+.footer-menu li a {
+	color: #333;
+	text-decoration: none;
+}
+
+.footer-menu li a:hover {
+	text-decoration: underline;
+}
