@@ -52,6 +52,12 @@
     cursor: pointer;
 }
 
+.login a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
 #profile img {
     height: 5em;
 }
@@ -60,6 +66,9 @@
     cursor: pointer;
     height: 3em;
 }
+.menu img{
+    height: 1.5em;
+}
 
 .content {
     position: absolute;
@@ -67,7 +76,6 @@
     left: 24em;
     color: white;
     font-family: 'Times New Roman', Times, serif;
-    ;
     height: fit-content;
     width: fit-content;
     text-align: center;
@@ -88,10 +96,13 @@
 }
 
 .search input {
-    width: 15em;
+    width: 19em;
     padding: 1em;
     border: 1px solid black;
     border-radius: 5em;
+}
+#Location {
+    width: 14em;
 }
 
 .search p {
@@ -104,7 +115,7 @@
     height: 2em;
     align-items: center;
     height: 3em;
-    width: 10em;
+    width: 9em;
     border: 1px solid black;
     justify-self: center;
     border-radius: 5em;
@@ -118,7 +129,7 @@
     position: relative;
     margin-bottom: 0.1em;
     top: -0.05em;
-    left: 0.8em;
+    left: 0.5em;
     font-size: 1.5em;
     height: 1em;
 }
@@ -212,7 +223,7 @@
 }
 .heading4 p{
     position: relative;
-    top: 21em;
+    top: -2em;
     font-size: 2em;
     text-align: center;
     font-weight: bolder;
@@ -222,7 +233,7 @@
     justify-content: center;
     gap: 3em;
     position: relative;
-    top: 48em;
+    top: -2em;
 }
 .food img{
     transition-duration: 1s;
@@ -233,14 +244,14 @@
 }
 .Delicious{
     position: relative;
-    top: 5em;
+    top: 50em;
 }
 .names{
     display: flex;
     justify-content: center;
     gap: 10.4em;
     position: relative;
-    top: 25em;
+    /* top: 25em; */
     font-family: 'Times New Roman', Times, serif;
     font-size: 2em;
     font-weight: bolder;
@@ -263,7 +274,7 @@
     font-size: 1.5em;
 }
 .about_details p{
-    height: 20em;
+    height: 10em;
     width: 40em;
 }
 .heading5{
@@ -277,10 +288,69 @@
 .Latestdisc{
     position: relative;
     text-align: center;
-    top: 28em;
+    top: 33em;
     font-size: 2em;
     font-weight: bolder;
 }
 .heading6{
     font-size: 2em;
+}
+.couponsimg{
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+}
+#disc-1{
+    height: 10em;
+}
+.coupons_details{
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+}
+#cpn_1{
+    width: 10em;
+}
+#cpn_2{
+    width: 10em;
+    position: relative;
+    left: 2em;
+}
+footer{
+    position: relative;
+    top: 90em;
+}
+.footer_bg{
+    height: 30em;
+
+}
+.footer_bg img{
+    height: 35em;
+    width: 98.9vw;
+}
+.footer_tabs{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    gap: 2em;
+    top: -8em;
+    font-size: 1.5em;
+}
+.footer_tabs a{
+
+    text-decoration: none;
+    color: white;
+}
+.footer_details{
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    gap: 2em;
+    width: 18em;
+    left: 22em;
+    gap: 2em;
+    top: -6em;
+    font-size: 1.5em;
+    color: white;
 }

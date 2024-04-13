@@ -23,10 +23,13 @@
             <div class="nav_items">
                 <div class="login">
                     <img id="profile" src="/Frontend/Assets/profile-icon.png" alt="">
-                    <p>Login</p>
+                    <a href="">Login</a>
                 </div>
                 <div class="search">
                     <img id="search" src="/Frontend/Assets/search-btn.png" alt="">
+                </div>
+                <div class="menu">
+                    <img src="/Frontend/Assets/menu.png" alt="">
                 </div>
             </div>
         </div>
@@ -37,8 +40,10 @@
                 <br>
             </div>
             <div class="search">
-                <input placeholder="Search Hotel" type="text" name="Search Hostel" id="search">
-                <input placeholder="All Locations" type="text" name="All Locations" id="">
+                <form method="get" action="/get">
+                    <input placeholder="Search Hotel" type="text" name="Search Hostel" id="search">
+                    <input placeholder="All Locations" type="text" name="All Locations" id="Location">
+                </form>
                 <div class="btn">
                     <p>Search</p>
                 </div>
@@ -46,7 +51,7 @@
         </div>
         <div class="best">
             <div class="heading2">
-                <p>Our Best Popular Hotels</p>
+                <p>Our Best Popular Restaurant</p>
                 <br>
             </div>
 
@@ -99,15 +104,31 @@
         </div>
         <div class="Latestdisc">
             <div class="heading6">
-                <p>Latest Discounts</p>
+                <p>Trending Offers</p>
             </div>
             <div class="couponsimg">
                 <img src="/Frontend/Assets/Disocunt-1.png" alt="">
+                <img src="/Frontend/Assets/Discount-2.png" alt="" id="disc-1">
             </div>
             <div class="coupons_details">
-
+                <p id="cpn_1">If you done 10 Orders from our site you get instant 10% off from our site</p>
+                <p id="cpn_2">If this is you First Order yo get 50% off from Order</p>
             </div>
         </div>
+        <footer>
+            <div class="footer_bg">
+                <img src="/Frontend/Assets/footer-bg.png" alt="">
+                <div class="footer_tabs">
+                    <a href="">Home</a>
+                    <a href="">Restaurants</a>
+                    <a href="">About us</a>
+                    <a href="">Feedback</a>
+                </div>
+                <div class="footer_details">
+                    <p>© 2024 InstaDine All Rights Reserved</p>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 
