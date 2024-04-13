@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 const initData = require("./data.js");
-const Listing = require("../models/listing.js");
+const Restaurant = require("../models/restaurant.js");
 
-const MONGO_URL = "mongodb://localhost:27017/wanderlust";
+const MONGO_URL = "mongodb://localhost:27017/restaurants";
 
 main()
 	.then(() => {
@@ -15,8 +15,8 @@ async function main() {
 }
 
 const initDB = async () => {
-	await Listing.deleteMany({});
-	await Listing.insertMany(initData.data);
+	await Restaurant.deleteMany({});
+	await Restaurant.insertMany(initData.data);
 	console.log("Data initialized");
 };
 
