@@ -7,7 +7,7 @@
     margin: auto;
     display: flex;
     height: 5em;
-    width: 100vw;
+    width: 98.1vw;
     background-color: rgba(72, 85, 254, 0.95);
     justify-content: center;
     align-items: center;
@@ -103,7 +103,46 @@ h1{
     display: flex;
     justify-content: start;
     gap: 2em;
+    margin-left: 2em;
 }
 .menu_img img{
     height: 40em;
+}
+footer{
+    position: relative;
+    /* top: 90em; */
+}
+.footer_bg{
+    height: 30em;
+
+}
+.footer_bg img{
+    height: 30em;
+    width: 98.9vw;
+}
+.footer_tabs{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    gap: 2em;
+    top: -8em;
+    font-size: 1.5em;
+}
+.footer_tabs a{
+
+    text-decoration: none;
+    color: white;
+}
+.footer_details{
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    gap: 2em;
+    width: 18em;
+    left: 22em;
+    gap: 2em;
+    top: -6em;
+    font-size: 1.5em;
+    color: white;
 }
