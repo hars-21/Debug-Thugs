@@ -1,154 +1,356 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .bg {
-	display: flex;
+    display: flex;
 }
 
 .bg img {
-	height: 50em;
-	width: 94.9992em;
-	position: relative;
-	left: -0.1em;
+    height: 50em;
+    width: 94.9992em;
+    position: relative;
+    left: -0.1em;
 }
 
 .navbar {
-	position: absolute;
-	top: 1em;
-	left: 9.5em;
-	margin: auto;
-	display: flex;
-	height: 5em;
-	justify-content: center;
-	align-items: center;
-	color: white;
-	gap: 50em;
-	font-family: "Times New Roman", Times, serif;
+    position: absolute;
+    top: 1em;
+    left: 9.5em;
+    margin: auto;
+    display: flex;
+    height: 5em;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 50em;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .site_name {
-	width: 5em;
-	font-size: 2em;
-	font-weight: 5000;
-	cursor: pointer;
+    width: 5em;
+    font-size: 2em;
+    font-weight: 5000;
+    cursor: pointer;
 }
 
 .nav_items {
-	display: flex;
-	gap: 2em;
-	height: 5em;
-	align-items: center;
+    display: flex;
+    gap: 2em;
+    height: 5em;
+    align-items: center;
 }
 
 .login {
-	display: flex;
-	align-items: center;
-	width: 7em;
-	font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    width: 7em;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.login a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
 }
 
 #profile img {
-	height: 5em;
+    height: 5em;
 }
 
 .nav_items img {
-	cursor: pointer;
-	height: 3em;
+    cursor: pointer;
+    height: 3em;
+}
+.menu img{
+    height: 1.5em;
 }
 
 .content {
-	position: absolute;
-	top: 15em;
-	left: 24em;
-	color: white;
-	font-family: "Times New Roman", Times, serif;
-	height: fit-content;
-	width: fit-content;
-	text-align: center;
-	font-weight: 5000;
+    position: absolute;
+    top: 15em;
+    left: 24em;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
+    font-weight: 5000;
 }
 
 .purpuse p {
-	font-size: 4em;
-	margin-bottom: 0.5em;
+    font-size: 4em;
+    margin-bottom: 0.5em;
 }
 
 .search {
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	height: 3em;
-	gap: 2em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 3em;
+    gap: 2em;
 }
 
 .search input {
-	width: 15em;
-	padding: 1em;
-	border: 1px solid black;
-	border-radius: 5em;
+    width: 19em;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 5em;
+}
+#Location {
+    width: 14em;
 }
 
 .search p {
-	height: 2em;
-	width: 5em;
+    height: 2em;
+    width: 5em;
 }
 
 .btn {
-	display: flex;
-	height: 2em;
-	align-items: center;
-	height: 3em;
-	width: 10em;
-	border: 1px solid black;
-	justify-self: center;
-	border-radius: 5em;
-	background-color: yellow;
-	color: blue;
-	cursor: pointer;
-	transition-duration: 1s;
+    display: flex;
+    height: 2em;
+    align-items: center;
+    height: 3em;
+    width: 9em;
+    border: 1px solid black;
+    justify-self: center;
+    border-radius: 5em;
+    background-color: yellow;
+    color: rgba(72, 85, 254, 0.95);
+    cursor: pointer;
+    transition-duration: 1s;
 }
 
 .btn p {
-	position: relative;
-	margin-bottom: 0.1em;
-	top: -0.05em;
-	font-size: 2em;
-	height: 1em;
+    position: relative;
+    margin-bottom: 0.1em;
+    top: -0.05em;
+    left: 0.5em;
+    font-size: 1.5em;
+    height: 1em;
 }
 
 .btn:hover {
-	background-color: white;
-	color: black;
-	scale: 1.1;
+    background-color: white;
+    color: black;
+    scale: 1.1;
 }
 
-.best {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	height: 5em;
-	width: 98.5vw;
+.best{
+    display: flex;
+    flex-direction: column;
+    height: 5em;
+    width: 98.5vw;
 }
 .heading2 {
-	position: relative;
-	top: 6em;
-	font-size: 2.5em;
-	text-align: center;
-	font-family: "Times New Roman", Times, serif;
-	font-weight: bolder;
+    /* position: relative;
+    top: 6em; */
+    font-size: 2.5em;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
 }
-.hotels {
-	position: relative;
-	top: 18em;
-	display: flex;
-	justify-content: center;
-	gap: 3em;
+.hotels{
+    /* position: relative;
+    top: 16.1em; */
+    display: flex;
+    justify-content: center;
+    height: 40em;
+    gap: 3em;
 }
 .hotels img {
-	height: 30em;
-	width: 22em;
-	border-radius: 5em;
+    height: 30em;
+    width: 22em;
+    border-radius: 5em;
+    transition: transform 1.0s ease-in-out; /* Use transition shorthand */
+}
+
+.hotels img:hover {
+    transform: rotateY(180deg);
+}
+.htlsnames{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    top: 1em;
+    gap: 10em;
+    font-size: 2em;
+}
+#hotel_1{
+    position: relative;
+    left:1.59em ;
+    
+}
+
+#hotel_2{
+    position: relative;
+    
+}
+#hotel_3{
+    position: relative;
+    left: -2.2em;
+    
+}
+
+.order{
+    display: flex;
+    justify-content: center;
+    
+}
+.button{
+    display: flex;
+    position: relative;
+    top: 5em;
+    align-items: center;
+    justify-content: center;
+    height: 2.5em;
+    width: 7em;
+    border: 1px solid black;
+    border-radius: 5em;
+    background-color: yellow;
+    font-size: larger;
+    font-weight: bolder;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+.button:hover{
+    scale: 1.2;
+    background-color: white;
+}
+.heading4 p{
+    position: relative;
+    top: -2em;
+    font-size: 2em;
+    text-align: center;
+    font-weight: bolder;
+}
+.food{
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    position: relative;
+    top: -2em;
+}
+.food img{
+    transition-duration: 1s;
+    border-radius: 2em;
+}
+.food img:hover{
+    scale: 1.1;
+}
+.Delicious{
+    position: relative;
+    top: 50em;
+}
+.names{
+    display: flex;
+    justify-content: center;
+    gap: 10.4em;
+    position: relative;
+    /* top: 25em; */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    font-weight: bolder;
+    color: rgba(72, 85, 254, 0.95);
+}
+.names img{
+    border-radius: 5em;
+}
+.aboutus{
+    position: relative;
+    top: 60em;
+    text-align: center;
+}
+.about_details{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    top: 6em;    
+    font-size: 1.5em;
+}
+.about_details p{
+    height: 10em;
+    width: 40em;
+}
+.heading5{
+    font-size: 2.5em;
+    font-weight: bolder;
+}
+.aboutimg{
+    position: relative;
+    top: 5em;
+}
+.Latestdisc{
+    position: relative;
+    text-align: center;
+    top: 33em;
+    font-size: 2em;
+    font-weight: bolder;
+}
+.heading6{
+    font-size: 2em;
+}
+.couponsimg{
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+}
+#disc-1{
+    height: 10em;
+}
+.coupons_details{
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+}
+#cpn_1{
+    width: 10em;
+}
+#cpn_2{
+    width: 10em;
+    position: relative;
+    left: 2em;
+}
+footer{
+    position: relative;
+    top: 90em;
+}
+.footer_bg{
+    height: 30em;
+
+}
+.footer_bg img{
+    height: 35em;
+    width: 98.9vw;
+}
+.footer_tabs{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    gap: 2em;
+    top: -8em;
+    font-size: 1.5em;
+}
+.footer_tabs a{
+
+    text-decoration: none;
+    color: white;
+}
+.footer_details{
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    gap: 2em;
+    width: 18em;
+    left: 22em;
+    gap: 2em;
+    top: -6em;
+    font-size: 1.5em;
+    color: white;
 }
