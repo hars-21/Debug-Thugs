@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    margin: auto;
+    display: flex;
+    height: 5em;
+    width: 98.1vw;
+    background-color: rgba(72, 85, 254, 0.95);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 50em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.site_name {
+    width: 5em;
+    font-size: 2em;
+    font-weight: 5000;
+    cursor: pointer;
+}
+
+.nav_items {
+    display: flex;
+    gap: 2em;
+    height: 5em;
+    align-items: center;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    width: 7em;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.login a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+#profile img {
+    height: 5em;
+}
+
+.nav_items img {
+    cursor: pointer;
+    height: 3em;
+}
+.menu img{
+    height: 1.5em;
+}
+.hotel_details{
+    display: flex;
+    align-items: center;
+    gap: 5em;
+}
+.detail_left{
+    width: 35em;
+}
+.hotel_img img {
+    height: 20em;
+    margin: 5em;
+    border-radius: 2em;
+}
+.detail_right{
+    display: flex;
+    flex-direction: column;
+    width: 40em;
+    gap: 1.1em;
+}
+.detail_right p{
+    width: 10em;
+    font-size: xx-large;
+}
+#spcldetail{
+    width: 7em;
+}
+h1{
+    width: 4em;
+}
+.detail_1{
+    display: flex;
+    align-items: center;
+}
+.detail_2{
+    display: flex;
+    align-items: center;
+}
+.detail_2 p{
+    width: 20em;
+}
+.detail_3{
+    display: flex;
+    align-items: center;
+}
+.menu_img{
+    display: flex;
+    justify-content: start;
+    gap: 2em;
+    margin-left: 2em;
+}
+.menu_img img{
+    height: 40em;
+}
+footer{
+    position: relative;
+    /* top: 90em; */
+}
+.footer_bg{
+    height: 30em;
+
+}
+.footer_bg img{
+    height: 30em;
+    width: 98.9vw;
+}
+.footer_tabs{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    gap: 2em;
+    top: -8em;
+    font-size: 1.5em;
+}
+.footer_tabs a{
+
+    text-decoration: none;
+    color: white;
+}
+.footer_details{
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    gap: 2em;
+    width: 18em;
+    left: 22em;
+    gap: 2em;
+    top: -6em;
+    font-size: 1.5em;
+    color: white;
+}
